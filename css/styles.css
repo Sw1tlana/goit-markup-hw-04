@@ -7,6 +7,7 @@
     --color-cornflower: #E7E9FC;
     --color-ocean: #404BBF;
     --color-border: #e7e9fc;
+    --color-light-slate: #8E8F99;   
 }
 
 body {
@@ -141,10 +142,12 @@ a {
     padding-bottom: 24px;
 }
 
-.header-list-link:hover,
-.header-list-link:focus {
+.header-list-link:hover::after {
     color: var(--color-ocean);
-    text-decoration: underline;
+    content: "";
+    width: 1px;
+    height: 1px;
+    color: var(--color-ocean);
 } 
 
 .link-info {
@@ -156,9 +159,8 @@ a {
 
 .link-info:hover,
 .header-list-link:focus {
-   text-decoration: none;
    color: var(--color-ocean);
-}
+} 
 
 
 /* -----------Main--------- */
@@ -167,7 +169,15 @@ a {
 /* Hero-section */
 
 .hero-section {
-    background-color: var(--color-navyblue);
+    background-image: linear-gradient(
+    to left, 
+    rgba(46, 47, 66, 0.70), 
+    rgba(46, 47, 66, 0.70)
+    ),
+    url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -214,7 +224,7 @@ a {
 }
 
 
-/* Section hidden Our advantages */
+/* ----------Section hidden Our advantages--------------- */
 
 .visually-hidden {
     position: absolute;
@@ -239,8 +249,18 @@ a {
     width: calc((100% - 72px) / 4);
 }
 
+.advantages-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--color-light-slate);
+    background: var(--color-cloud);
+    margin-bottom: 8px;
+}
 
-/* Section-team */
+
+/* -----------Section-team------------------- */
 
 .section-team {
     background-color: var(--color-cloud);
@@ -286,7 +306,14 @@ a {
     text-align: center;
 } 
 
-/* Section Our Portfolio */
+.container-social-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+/* --------------------Section Our Portfolio------------------ */
 
 .main-list-portfolio {
     display: flex;
@@ -335,4 +362,10 @@ a {
     width: 28%;
 }
 
+.container-social-footer {}
+
+.container-final-info {
+    display: flex;
+    flex-direction: column;
+}
  
