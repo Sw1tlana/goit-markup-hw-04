@@ -7,7 +7,8 @@
     --color-cornflower: #E7E9FC;
     --color-ocean: #404BBF;
     --color-border: #e7e9fc;
-    --color-light-slate: #8E8F99;   
+    --color-light-slate: #8E8F99;  
+    --color-green: #31D0AA;
 }
 
 body {
@@ -129,6 +130,7 @@ a {
     display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
 }
 
 .header-list-item:not(:last-child) {
@@ -136,19 +138,32 @@ a {
 }
 
 .header-list-link {
+    position: relative;
     color: var(--color-navyblue);
     font-weight: 500;
-    padding-top: 24px;
-    padding-bottom: 24px;
+}
+
+.header-list-link::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-ocean);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease-in-out;
+}
+
+.header-list-link:hover {
+    color: var(--color-ocean);
 }
 
 .header-list-link:hover::after {
-    color: var(--color-ocean);
-    content: "";
-    width: 1px;
-    height: 1px;
-    color: var(--color-ocean);
-} 
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
 .link-info {
     color: var(--color-slate);
@@ -157,8 +172,7 @@ a {
     padding-bottom: 24px;
 }
 
-.link-info:hover,
-.header-list-link:focus {
+.link-info:hover {
    color: var(--color-ocean);
 } 
 
@@ -257,6 +271,7 @@ a {
     border: 1px solid var(--color-light-slate);
     background: var(--color-cloud);
     margin-bottom: 8px;
+    padding: 24px 100px;
 }
 
 
@@ -312,6 +327,28 @@ a {
     align-items: center;
     gap: 24px;
 }
+
+.social-team-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--color-iris);
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+}
+
+.icon {
+    fill: var(--color-cloud);
+}
+
+.social-team-link:hover {
+   background-color: var(--color-green);
+}
+
+.icon:hover {
+   fill: var(--color-cloud);
+}  
 
 /* --------------------Section Our Portfolio------------------ */
 
