@@ -389,6 +389,9 @@ a {
    border-top: none;
 }
 
+
+/* ---Overley--------- */
+
 .container-overley {
     position: relative;
     overflow: hidden;
@@ -409,7 +412,9 @@ a {
     transform: translateY(0);
 }
 
+
 /* ---------Footer------------- */
+
 
 .final-info {
     background-color: var(--color-navyblue);
