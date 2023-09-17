@@ -133,7 +133,7 @@ a {
 .header-list-link {
     position: relative;
     padding: 24px 0;
-    color: var(--color-ocean);
+    color: var(--color-navyblue);
     font-weight: 500;
     line-height: 1.5;
     transform-origin: right;
@@ -142,6 +142,10 @@ a {
 
 .header-list-link:hover,
 .header-list-link:focus {
+    color: var(--color-ocean);
+}
+
+.header-link-current {
     color: var(--color-ocean);
 }
 
